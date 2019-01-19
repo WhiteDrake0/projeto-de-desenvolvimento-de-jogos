@@ -6,17 +6,21 @@ public class BackgroundAnimation : MonoBehaviour {
 
 	public Renderer bgRend;
 	public float bgSpeed;
+    //public float tileSizeY;
 
-	// Use this for initialization
-	void Start () {
-		/*mat = GetComponent<Renderer>().material;
-		mat.SetTextureOffset(Vector2.zero, "_MainTex");
-        offsetTexture = 0f;*/
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-		bgRend.material.mainTextureOffset += new Vector2(bgSpeed*Time.deltaTime, 0f);		
+   // private Vector3 startPosition;
+
+    void Start()
+    {
+       // startPosition = transform.position; 
+    }
+
+
+    // Update is called once per frame
+    void Update () {
+
+        bgRend.material.mainTextureOffset += new Vector2(bgSpeed*Time.deltaTime, 0f);	
+        //float newPosition = Mathf.Repeat(Time.time * bgSpeed, tileSizeY);
+        //transform.position = startPosition + Vector3.left * newPosition;
 	}
 }

@@ -309,10 +309,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\brutus_behaviour.cs" />
     <Compile Include="Assets\Scripts\BackgroundAnimation.cs" />
+    <Compile Include="Assets\Scripts\brutus_behaviour.cs" />
+    <Compile Include="Assets\Scripts\ChicoControls.cs" />
     <Compile Include="Assets\Scripts\controls.cs" />
     <Compile Include="Assets\Scripts\DogBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\obstacle.cs" />
+    <Compile Include="Assets\Scripts\PoolManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
