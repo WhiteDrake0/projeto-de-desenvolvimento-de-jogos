@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 1580724009}
   - component: {fileID: 1580724010}
   m_Layer: 0
-  m_Name: Chico sprites_0
+  m_Name: Chico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,7 +491,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8b65eb95c7173b34f8795900d066c825, type: 3}
+  m_Sprite: {fileID: 21300026, guid: a8c3469a91293a94cad3deb200bc72ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -539,5 +539,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.77, y: 3.34, z: 0.4}
-  m_Center: {x: 2.33, y: 0, z: 0}
+  m_Size: {x: 3.8751597, y: 3.2966604, z: 0.4}
+  m_Center: {x: -0.021173239, y: -0.2817073, z: 0}
