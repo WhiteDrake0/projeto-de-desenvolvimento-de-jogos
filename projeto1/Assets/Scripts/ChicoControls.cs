@@ -27,6 +27,10 @@ public class ChicoControls : MonoBehaviour {
         {
             print("hhh");
         }
+        if (col.gameObject.CompareTag("Player"))
+        {
+            print("bbbbb");
+        }
     }
 
 }

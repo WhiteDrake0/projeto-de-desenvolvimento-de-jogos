@@ -15,4 +15,11 @@ public class brutus_behaviour : MonoBehaviour
     {
         
     }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            print("colisao");
+        }
+    }
 }
