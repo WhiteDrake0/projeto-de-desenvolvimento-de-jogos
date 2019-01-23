@@ -16,8 +16,21 @@ public class PoolManager : MonoBehaviour {
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 
+    private float pos;
+
     // Use this for initialization
     void Start () {
+
+        //Determinar a largura da camara
+        Camera cam = Camera.main;
+        float height = 2f * cam.orthographicSize;
+        float width = height * cam.aspect;
+
+        //Determinar a largura do background e do paceio/estrada
+        float Wbg = width * 0.71f;
+        float Wstreet = Wbg * 0.4f;
+        pos = (Wstreet / 3) / 2;
+
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)
@@ -70,18 +83,18 @@ public class PoolManager : MonoBehaviour {
 
             if (randomPos == 1)
             {
-                randomY = -0.2f;
-                randomZ = -0.1f;
+                randomY = -1f;
+                randomZ = -1f;
             }
             else if (randomPos == 2)
             {
-                randomY = -1.2f;
-                randomZ = -1.1f;
+                randomY = -1f - pos;
+                randomZ = -1f - pos;
             }
             else if (randomPos == 3)
             {
-                randomY = -2.2f;
-                randomZ = -2.1f;
+                randomY = -1f - pos*2;
+                randomZ = -1f - pos * 2;
             }
 
             var obsPosition = new Vector3(13, randomY, randomZ);

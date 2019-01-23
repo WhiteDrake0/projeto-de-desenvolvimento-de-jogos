@@ -17,7 +17,12 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< Updated upstream
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
+=======
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D13C5F21-EBA1-420D-B1CD-A644765AD190}
+>>>>>>> Stashed changes
 	EndGlobalSection
 EndGlobal

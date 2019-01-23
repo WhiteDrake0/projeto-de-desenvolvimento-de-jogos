@@ -19,7 +19,7 @@ public class BackgroundAnimation : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-      //  bgRend.material.mainTextureOffset += new Vector2(bgSpeed*Time.deltaTime, 0f);	
+        // O que faz o loop do background
         float newPosition = Mathf.Repeat(Time.time * bgSpeed, tileSizeY);
         transform.position = startPosition + Vector3.left * newPosition;
 	}

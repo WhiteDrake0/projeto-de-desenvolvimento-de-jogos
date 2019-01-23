@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class obstacle : MonoBehaviour {
 
-    //public Renderer bgRend;
+    //Velocidade do obstaculo
     public float bgSpeed;
-    //public GameObject obst;
 
-
-
+    //Fora dos limites da camara
+    public float outofBounds;
 
 
     void Start()
     {
-        //mov = gameObject.GetComponent<Rigidbody>();
-        //InvokeRepeating("newObst", 5f, 2f);
+        //Determinar a largura da camara
+        Camera cam = Camera.main;
+        float height = 2f * cam.orthographicSize;
+        float width = height * cam.aspect;
 
-        
+        outofBounds = -width / 2;
 
     }
 
@@ -25,18 +26,11 @@ public class obstacle : MonoBehaviour {
     void Update() {
 
         transform.position += new Vector3(-bgSpeed * Time.deltaTime, 0f, 0f);
-
+        if(transform.position.x < outofBounds)
+        {
+            Destroy(gameObject);
+        }
 
     }
 
-    private void OnEnable()
-    {
-        StartCoroutine(waitForDesable());
-    }
-
-    private IEnumerator waitForDesable()
-    {
-        yield return new WaitForSeconds(5f);
-        gameObject.SetActive(false);
-    }
 }
