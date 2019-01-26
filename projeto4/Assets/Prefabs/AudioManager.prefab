@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2983144714582975651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2983144714582975653}
+  - component: {fileID: 2983144714582975652}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2983144714582975653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983144714582975651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.959013, y: -1.4693254, z: 7.8890433}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2983144714582975652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983144714582975651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65be259851f1984a8331ffedda5a8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Slide
+    clip: {fileID: 8300000, guid: 87805d7f1ec412341bbb9df50f84e829, type: 3}
+    volume: 0.5
+    pitch: 0.59
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: c93cd0bd400ab2e44a0f42713d21c2b3, type: 3}
+    volume: 0.216
+    pitch: 1.28
+    loop: 1
+    source: {fileID: 0}
+  - name: HitTrash
+    clip: {fileID: 8300000, guid: 1a1db83b5c7f97a4590ce41aead08dcb, type: 3}
+    volume: 0.5
+    pitch: 1.28
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 8939618deb7428b4f9719af91cc6a86a, type: 3}
+    volume: 0.5
+    pitch: 1.28
+    loop: 0
+    source: {fileID: 0}
+  - name: Fall
+    clip: {fileID: 8300000, guid: d95623eaa66254043a4698ccbc7ad449, type: 3}
+    volume: 0.5
+    pitch: 1.28
+    loop: 0
+    source: {fileID: 0}
+  - name: HitBat
+    clip: {fileID: 8300000, guid: 1c60e71c05ac53c42be37f140de89ee3, type: 3}
+    volume: 0.5
+    pitch: 1.28
+    loop: 0
+    source: {fileID: 0}
+  - name: swing
+    clip: {fileID: 8300000, guid: 82ecc46358e95324493b9d2be5f08edf, type: 3}
+    volume: 0.5
+    pitch: 1.81
+    loop: 0
+    source: {fileID: 0}
