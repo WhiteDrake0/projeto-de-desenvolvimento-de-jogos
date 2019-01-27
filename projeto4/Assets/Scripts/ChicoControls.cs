@@ -26,6 +26,10 @@ public class ChicoControls : MonoBehaviour {
     public float timeslide;
     public float tim;
 
+    //Para invulnerabilidade
+    Renderer rend;
+    Color c;
+
 
 
     void Start()
@@ -53,7 +57,11 @@ public class ChicoControls : MonoBehaviour {
 
         //Animação 
         animate = gameObject.GetComponent<Animator>();
-       
+
+        // frames de invulnerebilidade
+        rend = gameObject.GetComponent<Renderer>();
+        c = rend.material.color;
+
     }
 
 
@@ -109,7 +117,7 @@ public class ChicoControls : MonoBehaviour {
             lifePoints[lifePointsN].SetActive(false);
 
             //Indicador que levou um hit
-            StartCoroutine(Powsound());
+            StartCoroutine(Powsound(col));
 
 
             FindObjectOfType<AudioController>().Play("HitTrash");
@@ -133,7 +141,7 @@ public class ChicoControls : MonoBehaviour {
 
             FindObjectOfType<AudioController>().Play("HitBat");
             //Indicador que levou um hit
-            StartCoroutine(Powsound());
+            StartCoroutine(Powsound(col));
 
 
 
@@ -150,12 +158,21 @@ public class ChicoControls : MonoBehaviour {
 
      
 
-    private IEnumerator Powsound()
+    private IEnumerator Powsound(Collider other)
     {
         //ATIVAR O QUAD POW E DESATIVAR DEPOIS DE MEIO SEGUND
+
+        Physics.IgnoreLayerCollision(8, 9, true);
+        Physics.IgnoreLayerCollision(8, 10, true);
+        c.a = 0.5f;
+        rend.material.color = c;
         pow.SetActive(true);
         yield return new WaitForSeconds(waitTime);
         pow.SetActive(false);
+        Physics.IgnoreLayerCollision(8, 9, false);
+        Physics.IgnoreLayerCollision(8, 10, false);
+        c.a = 1f;
+        rend.material.color = c;
     }
 
 }
