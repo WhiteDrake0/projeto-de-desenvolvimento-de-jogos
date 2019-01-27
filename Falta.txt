@@ -1,6 +1,0 @@
-Aparecer dos obstaculos
-animação do rato
-score
-Comportamento do cão (bastão)
-Animação do gato quando colide com um obstáculo
-Animação do gato quando se baixa
